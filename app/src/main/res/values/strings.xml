@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">10120228Latihan2</string>
+    <string name="nama">Muhammad Hasbi Ar-Rasid</string>
+    <string name="golongan_darah">Blood type : B</string>
+    <string name="connect_fb">Connect With facebook</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/blue_light"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/bloodShare"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_welcome_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        app:layout_constraintTop_toBottomOf="@+id/bloodShare"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/username"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/password"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"/>
+
+    <Button
+        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/login"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        app:strokeColor="@color/white"
+        app:layout_constraintCircleRadius="16dp"
+        android:backgroundTint="#43b3e6"
+        app:strokeWidth="2dp"/>
+
+    <TextView
+        android:id="@+id/or"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="OR"
+        android:textAlignment="center"
+        android:textColor="@color/white"/>
+
+    <Button
+        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/btnFacebook"
+        app:layout_constraintTop_toBottomOf="@+id/or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        app:strokeColor="@color/white"
+        app:layout_constraintCircleRadius="16dp"
+        android:backgroundTint="@color/blue_light"
+        app:icon="@drawable/ic_welcome_fb_login"
+        android:text="@string/connect_fb"
+        app:iconTint="@color/white"
+        app:iconSize="30dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        app:strokeWidth="2dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnFacebook"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/doesntAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btnFacebook"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:text="Doesn't have account? " />
+
+        <TextView
+            android:id="@+id/register"
+            app:layout_constraintStart_toEndOf="@+id/doesntAccount"
+            app:layout_constraintTop_toBottomOf="@+id/btnFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/register"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
