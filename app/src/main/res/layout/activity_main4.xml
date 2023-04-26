@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:text="Verify Your Account"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:layout_marginTop="180dp"/>
 
     <TextView

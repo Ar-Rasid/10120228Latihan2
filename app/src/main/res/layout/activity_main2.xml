@@ -1,230 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <ImageView
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_header"
-        android:scaleType="fitStart"/>
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_header_back"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/back"
-        android:text="Register"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"/>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layout2"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:paddingBottom="20dp">
+        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/etUsername"
+        <ImageView
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:hint="Username"
-            android:textSize="@dimen/text_size_16"/>
+            android:src="@drawable/ic_header"
+            android:scaleType="fitStart"/>
 
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etUsername"
-            android:hint="Email"
-            android:textSize="@dimen/text_size_16"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_header_back"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"/>
 
-        <EditText
-            android:id="@+id/etNumber"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etEmail"
-            android:hint="Phone Number"
-            android:textSize="@dimen/text_size_16"/>
-
-        <RadioGroup
-            android:id="@+id/gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/etNumber">
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Male"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:textSize="@dimen/text_size_16"/>
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Female"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:textSize="@dimen/text_size_16"/>
-
-        </RadioGroup>
-
-        <LinearLayout
-            android:id="@+id/gender2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/gender">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Blood Type"
-                android:textSize="@dimen/text_size_16"
-                android:layout_weight="1"
-                android:drawableRight="@drawable/ic_arrow_dropdown"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Reshus"
-                android:textSize="@dimen/text_size_16"
-                android:layout_weight="1"
-                android:drawableRight="@drawable/ic_arrow_dropdown"/>
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gender2"
-            android:hint="Password"
-            android:textSize="@dimen/text_size_16"/>
-
-        <EditText
-            android:id="@+id/etRPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPassword"
-            android:hint="Retype Password"
-            android:textSize="@dimen/text_size_16"/>
-
-        <RadioGroup
-            android:id="@+id/type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/etRPassword">
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Pesonal"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:textSize="@dimen/text_size_16"/>
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Organization"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:textSize="@dimen/text_size_16"/>
-
-        </RadioGroup>
-
-        <EditText
-            android:id="@+id/job"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/type"
-            android:hint="Job"
-            android:textSize="@dimen/text_size_16"
-            android:drawableRight="@drawable/ic_arrow_dropdown"/>
-
-        <EditText
-            android:id="@+id/etHome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/job"
-            android:hint="Home Address"
-            android:textSize="@dimen/text_size_16"/>
-
-        <EditText
-            android:id="@+id/etLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etHome"
-            android:hint="Default Location"
-            android:textSize="@dimen/text_size_16"
-            android:drawableRight="@drawable/ic_blood_needed_location"/>
-
-        <CheckBox
-            android:id="@+id/agree"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etLocation"
-            android:layout_marginTop="10dp"
-            android:text="Agree with Terms and Conditions"
-            android:paddingLeft="@dimen/text_size_16"/>
-
-        <Button
-            style="?attr/materialButtonOutlinedStyle"
-            android:id="@+id/btnRegister"
-            app:layout_constraintTop_toBottomOf="@+id/agree"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/back"
             android:text="Register"
-            android:textSize="@dimen/text_size_16"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/blue_light"
-            app:strokeColor="@color/blue_light"
-            app:layout_constraintCircleRadius="16dp"
-            app:strokeWidth="2dp"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"/>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout2"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="20dp">
 
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="Username"
+                android:textSize="@dimen/text_size_16"/>
 
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etUsername"
+                android:hint="Email"
+                android:textSize="@dimen/text_size_16"/>
 
+            <EditText
+                android:id="@+id/etNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                android:hint="Phone Number"
+                android:textSize="@dimen/text_size_16"/>
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/etNumber">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/text_size_16"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/text_size_16"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/gender2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/gender">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Blood Type"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_arrow_dropdown"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reshus"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_arrow_dropdown"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender2"
+                android:hint="Password"
+                android:textSize="@dimen/text_size_16"/>
+
+            <EditText
+                android:id="@+id/etRPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword"
+                android:hint="Retype Password"
+                android:textSize="@dimen/text_size_16"/>
+
+            <RadioGroup
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/etRPassword">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pesonal"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/text_size_16"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Organization"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/text_size_16"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/type"
+                android:hint="Job"
+                android:textSize="@dimen/text_size_16"
+                android:drawableRight="@drawable/ic_arrow_dropdown"/>
+
+            <EditText
+                android:id="@+id/etHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/job"
+                android:hint="Home Address"
+                android:textSize="@dimen/text_size_16"/>
+
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etHome"
+                android:hint="Default Location"
+                android:textSize="@dimen/text_size_16"
+                android:drawableRight="@drawable/ic_blood_needed_location"/>
+
+            <CheckBox
+                android:id="@+id/agree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etLocation"
+                android:layout_marginTop="10dp"
+                android:text="Agree with Terms and Conditions"
+                android:paddingLeft="@dimen/text_size_16"/>
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/btnRegister"
+                app:layout_constraintTop_toBottomOf="@+id/agree"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Register"
+                android:textSize="@dimen/text_size_16"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/blue_light"
+                app:strokeColor="@color/blue_light"
+                app:layout_constraintCircleRadius="16dp"
+                app:strokeWidth="2dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

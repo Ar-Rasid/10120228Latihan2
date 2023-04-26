@@ -77,6 +77,12 @@
         android:text="@string/golongan_darah"
         android:textSize="16sp"
         android:textColor="@color/black"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/statistik"
+        android:background="@color/gray"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/statistik"
@@ -164,6 +170,12 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/statistik"
+        android:background="@color/gray"/>
 
     <LinearLayout
         android:id="@+id/kategori1"
